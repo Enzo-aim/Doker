@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:13-alpine
+    restart: always
+    ports:
+      - "8888:5432"
+    environment:
+      POSTGRES_PASSWORD: 9mREsvXDs9Gk89E
+      POSTGRES_USER: app
+      POSTGRES_DB: db
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
